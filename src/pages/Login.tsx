@@ -26,12 +26,12 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-dashboard-dark-bg">
       <div className="w-full max-w-md p-8 bg-dashboard-card-bg rounded-lg shadow-lg border border-dashboard-border">
         <div className="flex justify-center mb-8">
-          <div className="h-12 w-12 rounded-full bg-gradient-to-r from-dashboard-accent-purple to-dashboard-accent-pink flex items-center justify-center text-white font-bold text-xl">
-            TF
-          </div>
+        <div className="h-8 w-8 flex items-center justify-center">
+          <img src="/Star 1.svg" alt="Dokkaabi logo" className="w-full h-full" />
+        </div>
         </div>
         
-        <h1 className="text-2xl font-bold text-center mb-6">Welcome to TalentFlow</h1>
+        <h1 className="text-2xl font-bold text-center mb-6">Welcome to Dokkaabi</h1>
         <p className="text-dashboard-text-secondary text-center mb-8">
           Log in to access your recruitment dashboard
         </p>
