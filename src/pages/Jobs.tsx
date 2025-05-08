@@ -28,10 +28,7 @@ export default function Jobs() {
           </div>
         </div>
 
-        <div
-          className="relative w-full"
-          style={{ height: "calc(100vh - 200px)" }}
-        >
+        <div className="relative w-full h-[220px]">
           <div className="absolute inset-0 overflow-x-scroll overflow-y-hidden no-scrollbar">
             <div className="inline-flex gap-6 pb-6 h-full">
               {jobs.map((job) => (
