@@ -1,73 +1,131 @@
-# Welcome to your Lovable project
+# Dokkaabi
 
-## Project info
+A modern talent management platform for recruiters to manage candidates and job positions effectively, with integrated voice assistant capabilities.
 
-**URL**: https://lovable.dev/projects/38428b0c-d4be-411d-931d-87a934bf0b1a
+## 🚀 Features
 
-## How can I edit this code?
+- **Candidate Management**: Track and manage candidate profiles and applications
+- **Job Management**: Create, edit, and manage job listings
+- **Dashboard**: Get an overview of your recruitment process
+- **Insights**: Data-driven recruitment analytics
+- **Chatbot**: AI-powered voice assistant for recruitment queries with text-to-speech and speech-to-text capabilities
 
-There are several ways of editing your application.
+## 💻 Tech Stack
 
-**Use Lovable**
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **UI Components**: Shadcn UI (based on Radix UI)
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Form Handling**: React Hook Form with Zod validation
+- **Data Fetching**: TanStack React Query
+- **Charts**: Recharts
+- **Audio Processing**: WebSockets for real-time speech-to-text
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/38428b0c-d4be-411d-931d-87a934bf0b1a) and start prompting.
+## 🛠️ Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or higher)
+- npm or yarn or bun
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone https://github.com/gopikant21/dokkaabi.git
+cd dokkaabi
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm install
+# or
+yarn install
+# or
+bun install
+```
 
-**Use GitHub Codespaces**
+3. Start the development server
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+bun dev
+```
 
-## What technologies are used for this project?
+4. Open your browser and navigate to `http://localhost:8080`
 
-This project is built with:
+## 📦 Build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run build
+# or
+yarn build
+# or
+bun build
+```
 
-## How can I deploy this project?
+To preview the build:
 
-Simply open [Lovable](https://lovable.dev/projects/38428b0c-d4be-411d-931d-87a934bf0b1a) and click on Share -> Publish.
+```bash
+npm run preview
+# or
+yarn preview
+# or
+bun preview
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🧪 Linting
 
-Yes, you can!
+```bash
+npm run lint
+# or
+yarn lint
+# or
+bun lint
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📁 Project Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+dokkaabi/
+├── public/              # Static assets
+│   └── lovable-uploads/ # Uploaded images and media
+├── src/
+│   ├── components/      # Reusable components
+│   │   ├── candidates/  # Candidate-related components
+│   │   ├── chatbot/     # Voice assistant components
+│   │   ├── insights/    # Analytics and reporting components
+│   │   ├── jobs/        # Job-related components
+│   │   ├── layout/      # Layout components
+│   │   └── ui/          # UI components (from shadcn/ui)
+│   ├── context/         # React contexts
+│   │   ├── AppContext   # Application state management
+│   │   └── AudioContext # Audio processing for voice assistant
+│   ├── data/            # Data models and mock data
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── pages/           # Application pages
+│   ├── services/        # API services and external integrations
+│   ├── App.tsx          # Main App component
+│   └── main.tsx         # Application entry point
+└── ...config files      # Various configuration files
+```
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory and add the following variables:
+
+```
+VITE_API_URL=http://localhost:2900
+```
+
+## 📄 License
+
+[MIT](LICENSE)
