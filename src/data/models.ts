@@ -1,4 +1,3 @@
-
 // Data models for the application
 
 export interface User {
