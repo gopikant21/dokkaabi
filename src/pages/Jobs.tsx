@@ -1,4 +1,3 @@
-
 import MainLayout from "@/components/layout/MainLayout";
 import JobCard from "@/components/jobs/JobCard";
 import { useApp } from "@/context/AppContext";
@@ -18,7 +17,7 @@ export default function Jobs() {
               Manage and track all your job postings
             </p>
           </div>
-          
+
           <div className="flex space-x-3">
             <Button variant="outline" size="sm">
               <Filter size={16} className="mr-2" /> Filter
@@ -28,11 +27,20 @@ export default function Jobs() {
             </Button>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {jobs.map((job) => (
-            <JobCard key={job.id} job={job} />
-          ))}
+
+        <div
+          className="relative w-full"
+          style={{ height: "calc(100vh - 200px)" }}
+        >
+          <div className="absolute inset-0 overflow-x-scroll overflow-y-hidden no-scrollbar">
+            <div className="inline-flex gap-6 pb-6 h-full">
+              {jobs.map((job) => (
+                <div key={job.id} className="w-[370px] flex-shrink-0">
+                  <JobCard job={job} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </MainLayout>

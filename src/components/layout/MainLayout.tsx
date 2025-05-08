@@ -1,4 +1,3 @@
-
 import { ReactNode, useState } from "react";
 import Sidebar from "./Sidebar";
 import TopNav from "./TopNav";
@@ -16,20 +15,22 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="min-h-screen flex bg-dashboard-dark-bg text-dashboard-text-primary">
       <Sidebar collapsed={sidebarCollapsed} />
-      
-      <div className="flex-1 flex flex-col">
-        <TopNav 
-          toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} 
+
+      <div
+        className={`flex-1 flex flex-col h-screen ${
+          selectedCandidate ? "blur-sm pointer-events-none" : ""
+        }`}
+      >
+        <TopNav
+          toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)}
           sidebarCollapsed={sidebarCollapsed}
         />
-        
-        <main className="flex-1 p-6 overflow-auto">
-          {children}
-        </main>
+
+        <main className="flex-1 p-6 overflow-y-auto">{children}</main>
       </div>
-      
+
       {selectedCandidate && (
-        <CandidateDetails 
+        <CandidateDetails
           candidate={selectedCandidate}
           onClose={() => setSelectedCandidate(null)}
         />
